@@ -11,14 +11,19 @@
     <div class="container">
         <div class="l112">
             <div class="io">
-                <h1 contenteditable>IO</h1>
+                <h1 contenteditable>IO <span id="IOpercent"></span></h1>
+                <h2><span id="IOvalue"></span> BV</h2>
+                <h2><span id="IOsalary"></span> ฿</h2>
+                <!-- <h2><span id="IOTotal"></span> ฿</h2> -->
+                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVIO" onchange="updateA();">
             </div>
         </div>
         <div class="l2">
             <div class="a">
                 <h1 contenteditable>A <span id="Apercent"></span></h1>
-                <h2><span id="Avalue"></span> BV</h2>
+                <h2>Total <span id="Avalue"></span> BV</h2>
                 <h2><span id="Asalary"></span> ฿</h2>
+                <!-- <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVA" onchange="AupdateVal(this.value);"> -->
             </div>
         </div>
         <div class="l1">
