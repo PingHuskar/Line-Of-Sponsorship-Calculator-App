@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Of Sponsorship Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="l112">
+            <div class="io">
+                <h1 contenteditable>IO</h1>
+            </div>
+        </div>
+        <div class="l2">
+            <div class="a">
+                <h1 contenteditable>A <span id="Apercent"></span></h1>
+                <h2><span id="Avalue"></span> BV</h2>
+                <h2><span id="Asalary"></span> ฿</h2>
+            </div>
+        </div>
+        <div class="l1">
+            <div class="b">
+                <h1 contenteditable>B <span id="Bpercent"></span></h1>
+                <h2><span id="Bvalue"></span> BV</h2>
+                <h2><span id="Bsalary"></span> ฿</h2>
+                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVB" onchange="updateVal(this.id,this.value);">
+            </div>
+            <div class="c">
+                <h1 contenteditable>C <span id="Cpercent"></span></h1>
+                <h2><span id="Cvalue"></span> BV</h2>
+                <h2><span id="Csalary"></span> ฿</h2>
+                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVC" onchange="updateVal(this.id,this.value);">
+            </div>
+            <div class="d">
+                <h1 contenteditable>D <span id="Dpercent"></span></h1>
+                <h2><span id="Dvalue"></span> BV</h2>
+                <h2><span id="Dsalary"></span> ฿</h2>
+                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVD" onchange="updateVal(this.id,this.value);">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
