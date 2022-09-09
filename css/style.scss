@@ -1,14 +1,20 @@
 * {
     margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: sans-serif;
 }
+
 .container {
+    position: fixed;
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transform: translateX(12.5%);
     div {
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,7 +25,8 @@
             text-align: center;
         }
         div {
-            background: red;
+            background: sandybrown;
+            border: #04AA6D 5px solid;
             width: 20vw;
             // margin-top: 10vh;
             // margin-bottom: 10vh;

@@ -5,48 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Line Of Sponsorship Calculator App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="l112">
             <div class="io">
-                <h1 contenteditable>IO <span id="IOpercent"></span></h1>
+                <h1 contenteditable>IO <span id="IOpercent" contenteditable="false"></span></h1>
                 <h2><span id="IOvalue"></span> BV</h2>
                 <h2><span id="IOsalary"></span> ฿</h2>
                 <!-- <h2><span id="IOTotal"></span> ฿</h2> -->
-                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVIO" onchange="updateA();">
+                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVIO" oninput="updateA();">
             </div>
         </div>
         <div class="l2">
             <div class="a">
-                <h1 contenteditable>A <span id="Apercent"></span></h1>
+                <h1 contenteditable>A <span id="Apercent" contenteditable="false"></span></h1>
                 <h2>Total <span id="Avalue"></span> BV</h2>
                 <h2><span id="Asalary"></span> ฿</h2>
-                <!-- <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVA" onchange="AupdateVal(this.value);"> -->
+                <!-- <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVA" oninput="AupdateVal(this.value);"> -->
             </div>
         </div>
         <div class="l1">
             <div class="b">
-                <h1 contenteditable>B <span id="Bpercent"></span></h1>
+                <h1 contenteditable>B <span id="Bpercent" contenteditable="false"></span></h1>
                 <h2><span id="Bvalue"></span> BV</h2>
                 <h2><span id="Bsalary"></span> ฿</h2>
-                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVB" onchange="updateVal(this.id,this.value);">
+                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVB" oninput="updateVal(this.id,this.value);">
             </div>
             <div class="c">
-                <h1 contenteditable>C <span id="Cpercent"></span></h1>
+                <h1 contenteditable>C <span id="Cpercent" contenteditable="false"></span></h1>
                 <h2><span id="Cvalue"></span> BV</h2>
                 <h2><span id="Csalary"></span> ฿</h2>
-                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVC" onchange="updateVal(this.id,this.value);">
+                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVC" oninput="updateVal(this.id,this.value);">
             </div>
             <div class="d">
-                <h1 contenteditable>D <span id="Dpercent"></span></h1>
+                <h1 contenteditable>D <span id="Dpercent" contenteditable="false"></span></h1>
                 <h2><span id="Dvalue"></span> BV</h2>
                 <h2><span id="Dsalary"></span> ฿</h2>
-                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVD" onchange="updateVal(this.id,this.value);">
+                <input type="range" min="0" max="450000" value="0" step="5000" class="slider" id="BVD" oninput="updateVal(this.id,this.value);">
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/PingHuskar/BackgroundColorChangerJS/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/easing/EasePack.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>
