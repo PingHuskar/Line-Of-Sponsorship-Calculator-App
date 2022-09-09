@@ -25,11 +25,13 @@ const updateIO = (v1,v2) => {
     document.getElementById(`IOsalary`).textContent = `${
         ((parseInt(document.getElementById("BVIO").value)+parseInt(v1))*CalculatePercent(v1+parseInt(document.getElementById("BVIO").value))/100)-parseInt(sumArray.reduce((a, b) => a + b, 0))
     }`
+    downIO()
 }
 const updateA = () => {
     const getFrom = ['B','C','D']
     var sumArray = []
     var subArray = []
+    
     for (var i = 0; i < getFrom.length; i++) {
         var checkval = document.getElementById(`${getFrom[i]}value`).textContent
         sumArray.push(parseInt(checkval)||0)
@@ -39,11 +41,13 @@ const updateA = () => {
     document.getElementById(`Avalue`).textContent = `${A}`
     document.getElementById(`Apercent`).textContent  = `(${CalculatePercent(A)}%)`
     document.getElementById(`Asalary`).textContent  = `${CalculatePercent(A)*A/100-subArray.reduce((a, b) => a + b, 0)}`
+    
     updateIO(A,CalculatePercent(A)*A/100-subArray.reduce((a, b) => a + b, 0));
 }
 const updateVal = (id,val) => {
     document.getElementById(`${id[2]}value`).textContent = `${val}`
     document.getElementById(`${id[2]}percent`).textContent  = `(${CalculatePercent(val)}%)`
     document.getElementById(`${id[2]}salary`).textContent  = `${CalculatePercent(val)*val/100}`
-    updateA();
+    updateA()
+    downA()
 }
